@@ -43,7 +43,7 @@ echo 'Grand total: ' . $result->getTotal();
 
 Here is an example twig template for generating a results table:
 
-```
+```twig
 {% extends '::base.html.twig' %}
 
 {% block body %}

@@ -3,13 +3,12 @@ prezent/pulse-bundle
 
 Basic analytics event tracking in Symfony
 
-The full documentation can be found in [Resources/doc](src/Resources/doc/index.md)
-
 Index
 -----
 
 1. Installation (see below)
 2. [Getting started](getting-started.md)
+3. [Using results](using-results.md)
 
 
 Installation

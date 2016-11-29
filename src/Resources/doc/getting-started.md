@@ -61,7 +61,7 @@ $query
     ->setStartDate(new \DateTime('-7 days'))
     ->setEndDate(new \DateTime())
 ;
-'])
+
 $repository = $container->get('prezent_pulse.repository');
 
 $result = $repository->query($query);

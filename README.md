@@ -40,7 +40,7 @@ class AppController extends Controller
 }
 ```
 
-```
+```twig
 {% extends '::base.html.twig' %}
 
 {% block body %}

@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="prezent_pulse.listener.event" class="Prezent\PulseBundle\EventListener\PulseEventListener">
+            <argument type="service" id="prezent_pulse.repository" />
+            <tag name="kernel.event_subscriber" />
+        </service>
+
+        <service id="prezent_pulse.listener.schema" class="Prezent\PulseBundle\EventListener\SchemaListener" public="false">
+            <tag name="doctrine.event_listener" event="postGenerateSchema" lazy="true" />
+        </service>
+
+        <service id="prezent_pulse.repository" class="Prezent\PulseBundle\Repository\EventRepository">
+            <argument type="service" id="prezent_pulse.connection" />
+        </service>
+
+    </services>
+</container>
